@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+
+# Jupyter and editors
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+# Competition data and prepared arrays
+*.csv
+*.parquet
+*.npy
+prepared/
+competition_data/
+data/
+smoke/
+
+# Trained models and generated outputs
+*.pt
+*.pth
+*.cbm
+artifacts/
+colab_results/
+report_assets/
+submission*.zip
+
+# Document rendering intermediates
+report_rendered/
+*.pdf
+
