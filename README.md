@@ -233,6 +233,19 @@ python scripts/generate_report_assets.py \
 - динамику метрик CNN по эпохам;
 - сравнение CatBoost, CNN и ансамбля на общей validation-выборке.
 
+Готовые изображения последнего полного запуска уже добавлены в репозиторий:
+
+- [распределение длины потоков](docs/assets/report/flow_length_distribution.png);
+- [распределение размеров пакетов](docs/assets/report/packet_size_distribution.png);
+- [заполненность позиций 1–30](docs/assets/report/sequence_position_occupancy.png);
+- [результаты пяти фолдов](docs/assets/report/cross_validation_folds.png);
+- [история обучения CNN](docs/assets/report/cnn_training_history.png);
+- [сравнение итоговых моделей](docs/assets/report/model_comparison.png).
+
+![Результаты кросс-валидации](docs/assets/report/cross_validation_folds.png)
+
+![Сравнение моделей](docs/assets/report/model_comparison.png)
+
 ## Анализ паттернов приложений
 
 Подробное пошаговое исследование находится в
@@ -261,7 +274,7 @@ python scripts/analyze_application_patterns.py \
 
 Скрипт не обучает модели и не требует GPU. Он обрабатывает данные пакетами,
 создаёт `application_profiles.csv`, таблицы ближайших профилей, JSON с
-выводами и десять PNG-графиков. Небольшие результаты из `analysis_results`
+выводами и восемь PNG-графиков. Небольшие результаты из `analysis_results`
 предназначены для публикации вместе с кодом.
 
 ## Публикация в Git
@@ -279,9 +292,9 @@ git remote add origin <адрес-репозитория>
 git push -u origin main
 ```
 
-В репозиторий следует добавить небольшие итоговые JSON и PNG из
-`colab_results/report_assets`, но не `train.csv`, `test.csv`, `.npy`, `.pt` и
-`.cbm`.
+Необходимые итоговые JSON и PNG уже находятся в `analysis_results` и
+`docs/assets/report`. В репозиторий не нужно добавлять `train.csv`, `test.csv`,
+подготовленные многогигабайтные массивы, `.pt` и `.cbm`.
 
 ## Тесты
 
