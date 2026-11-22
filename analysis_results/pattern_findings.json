@@ -1,0 +1,566 @@
+{
+  "applications": 252,
+  "flows": 8248546,
+  "profile_features": [
+    "mean_flow_length",
+    "full_length_share",
+    "client_packet_share",
+    "client_byte_share",
+    "mean_abs_packet_size",
+    "mean_direction_changes",
+    "small_packet_share",
+    "large_packet_share",
+    "near_mtu_packet_share"
+  ],
+  "strongest_profile_correlations": [
+    {
+      "feature_1": "mean_abs_packet_size",
+      "feature_2": "large_packet_share",
+      "correlation": 0.9696441624618709
+    },
+    {
+      "feature_1": "client_packet_share",
+      "feature_2": "client_byte_share",
+      "correlation": 0.904215311330675
+    },
+    {
+      "feature_1": "mean_flow_length",
+      "feature_2": "full_length_share",
+      "correlation": 0.8676127068973188
+    },
+    {
+      "feature_1": "mean_abs_packet_size",
+      "feature_2": "small_packet_share",
+      "correlation": -0.7590830452844987
+    },
+    {
+      "feature_1": "small_packet_share",
+      "feature_2": "large_packet_share",
+      "correlation": -0.6998943124197284
+    },
+    {
+      "feature_1": "mean_abs_packet_size",
+      "feature_2": "near_mtu_packet_share",
+      "correlation": 0.6888212843793756
+    },
+    {
+      "feature_1": "large_packet_share",
+      "feature_2": "near_mtu_packet_share",
+      "correlation": 0.6588379607138861
+    },
+    {
+      "feature_1": "client_packet_share",
+      "feature_2": "large_packet_share",
+      "correlation": -0.4937925478313278
+    },
+    {
+      "feature_1": "mean_direction_changes",
+      "feature_2": "large_packet_share",
+      "correlation": -0.4848805264455979
+    },
+    {
+      "feature_1": "small_packet_share",
+      "feature_2": "near_mtu_packet_share",
+      "correlation": -0.47178797547693624
+    }
+  ],
+  "extremes": {
+    "mean_flow_length": {
+      "highest": [
+        {
+          "app_service": "218",
+          "mean_flow_length": 29.98132843587389
+        },
+        {
+          "app_service": "createjs",
+          "mean_flow_length": 29.470817120622566
+        },
+        {
+          "app_service": "tweet-feed",
+          "mean_flow_length": 29.450704225352112
+        },
+        {
+          "app_service": "DataSaver",
+          "mean_flow_length": 29.37815
+        },
+        {
+          "app_service": "apple_push",
+          "mean_flow_length": 28.92921
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "felo-ai",
+          "mean_flow_length": 10.715789473684211
+        },
+        {
+          "app_service": "QQ",
+          "mean_flow_length": 11.32713567839196
+        },
+        {
+          "app_service": "samsung-updates",
+          "mean_flow_length": 11.366859623733719
+        },
+        {
+          "app_service": "DoH_DoT",
+          "mean_flow_length": 11.9482
+        },
+        {
+          "app_service": "mediatek-online",
+          "mean_flow_length": 12.207862407862407
+        }
+      ]
+    },
+    "full_length_share": {
+      "highest": [
+        {
+          "app_service": "218",
+          "full_length_share": 0.9987756351392715
+        },
+        {
+          "app_service": "tweet-feed",
+          "full_length_share": 0.9773082942097027
+        },
+        {
+          "app_service": "createjs",
+          "full_length_share": 0.9755419677598666
+        },
+        {
+          "app_service": "DataSaver",
+          "full_length_share": 0.89922
+        },
+        {
+          "app_service": "apple_push",
+          "full_length_share": 0.79425
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "opendrive",
+          "full_length_share": 0.0007293946024799417
+        },
+        {
+          "app_service": "mediatek-online",
+          "full_length_share": 0.005896805896805897
+        },
+        {
+          "app_service": "samsung-updates",
+          "full_length_share": 0.011577424023154847
+        },
+        {
+          "app_service": "felo-ai",
+          "full_length_share": 0.014736842105263158
+        },
+        {
+          "app_service": "pushed",
+          "full_length_share": 0.02099483204134367
+        }
+      ]
+    },
+    "client_packet_share": {
+      "highest": [
+        {
+          "app_service": "gigacode",
+          "client_packet_share": 0.7935884026505091
+        },
+        {
+          "app_service": "DropBox",
+          "client_packet_share": 0.6734150902454228
+        },
+        {
+          "app_service": "apple_push",
+          "client_packet_share": 0.6344189834426864
+        },
+        {
+          "app_service": "similarweb",
+          "client_packet_share": 0.628090836578614
+        },
+        {
+          "app_service": "sentry",
+          "client_packet_share": 0.6241632521892826
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "tweet-feed",
+          "client_packet_share": 0.1020511185504012
+        },
+        {
+          "app_service": "shodan",
+          "client_packet_share": 0.14604781153287438
+        },
+        {
+          "app_service": "tria",
+          "client_packet_share": 0.14949167339190636
+        },
+        {
+          "app_service": "createjs",
+          "client_packet_share": 0.1790020999157519
+        },
+        {
+          "app_service": "Telegram",
+          "client_packet_share": 0.21717628137490455
+        }
+      ]
+    },
+    "client_byte_share": {
+      "highest": [
+        {
+          "app_service": "gigacode",
+          "client_byte_share": 0.8974097112111293
+        },
+        {
+          "app_service": "apple_push",
+          "client_byte_share": 0.797234387262622
+        },
+        {
+          "app_service": "DropBox",
+          "client_byte_share": 0.7658338751229795
+        },
+        {
+          "app_service": "sentry",
+          "client_byte_share": 0.7307068555031456
+        },
+        {
+          "app_service": "similarweb",
+          "client_byte_share": 0.7301494810188084
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "tweet-feed",
+          "client_byte_share": 0.020702267139983948
+        },
+        {
+          "app_service": "tria",
+          "client_byte_share": 0.04463242393862316
+        },
+        {
+          "app_service": "shodan",
+          "client_byte_share": 0.047458256561125206
+        },
+        {
+          "app_service": "wondershare",
+          "client_byte_share": 0.057020097345502854
+        },
+        {
+          "app_service": "createjs",
+          "client_byte_share": 0.07276165545093123
+        }
+      ]
+    },
+    "mean_abs_packet_size": {
+      "highest": [
+        {
+          "app_service": "tweet-feed",
+          "mean_abs_packet_size": 1280.4021201976725
+        },
+        {
+          "app_service": "lamoda",
+          "mean_abs_packet_size": 1094.3425917337229
+        },
+        {
+          "app_service": "createjs",
+          "mean_abs_packet_size": 1048.8463729299483
+        },
+        {
+          "app_service": "shodan",
+          "mean_abs_packet_size": 1032.4548648392597
+        },
+        {
+          "app_service": "MEGA",
+          "mean_abs_packet_size": 1028.4715019618948
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "fastly",
+          "mean_abs_packet_size": 285.73243262784956
+        },
+        {
+          "app_service": "GMail",
+          "mean_abs_packet_size": 293.68523703915423
+        },
+        {
+          "app_service": "split",
+          "mean_abs_packet_size": 322.29811121539996
+        },
+        {
+          "app_service": "vigo",
+          "mean_abs_packet_size": 331.23149179587534
+        },
+        {
+          "app_service": "tns-counter",
+          "mean_abs_packet_size": 361.87010056351653
+        }
+      ]
+    },
+    "mean_direction_changes": {
+      "highest": [
+        {
+          "app_service": "GMail",
+          "mean_direction_changes": 20.01872
+        },
+        {
+          "app_service": "windows-push-notifications",
+          "mean_direction_changes": 13.954714817999427
+        },
+        {
+          "app_service": "ea-fifa",
+          "mean_direction_changes": 13.076190476190476
+        },
+        {
+          "app_service": "cloudflare.dns",
+          "mean_direction_changes": 12.142543630473403
+        },
+        {
+          "app_service": "multifactor",
+          "mean_direction_changes": 11.647338424975196
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "tweet-feed",
+          "mean_direction_changes": 3.001564945226917
+        },
+        {
+          "app_service": "tria",
+          "mean_direction_changes": 3.00636
+        },
+        {
+          "app_service": "shodan",
+          "mean_direction_changes": 3.4420536051340127
+        },
+        {
+          "app_service": "adblock-plus",
+          "mean_direction_changes": 3.596455020031565
+        },
+        {
+          "app_service": "wondershare",
+          "mean_direction_changes": 4.157460317460317
+        }
+      ]
+    },
+    "small_packet_share": {
+      "highest": [
+        {
+          "app_service": "Instagram",
+          "small_packet_share": 0.43125916273008635
+        },
+        {
+          "app_service": "bugsnag",
+          "small_packet_share": 0.4041820318515217
+        },
+        {
+          "app_service": "to-doist",
+          "small_packet_share": 0.40313822062259264
+        },
+        {
+          "app_service": "evernote",
+          "small_packet_share": 0.39155180591287353
+        },
+        {
+          "app_service": "mozilla",
+          "small_packet_share": 0.39062484713095375
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "tweet-feed",
+          "small_packet_share": 0.0002922578245390297
+        },
+        {
+          "app_service": "nuget",
+          "small_packet_share": 0.020688846360927347
+        },
+        {
+          "app_service": "Teams",
+          "small_packet_share": 0.026437266442534555
+        },
+        {
+          "app_service": "Telegram",
+          "small_packet_share": 0.030170247045057313
+        },
+        {
+          "app_service": "299",
+          "small_packet_share": 0.03560017462386273
+        }
+      ]
+    },
+    "large_packet_share": {
+      "highest": [
+        {
+          "app_service": "tweet-feed",
+          "large_packet_share": 0.8584409373505499
+        },
+        {
+          "app_service": "createjs",
+          "large_packet_share": 0.6693952997095326
+        },
+        {
+          "app_service": "lamoda",
+          "large_packet_share": 0.6572845890437431
+        },
+        {
+          "app_service": "tria",
+          "large_packet_share": 0.6221369512585081
+        },
+        {
+          "app_service": "shodan",
+          "large_packet_share": 0.6038969241457715
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "moex-online",
+          "large_packet_share": 0.06318214383388114
+        },
+        {
+          "app_service": "GMail",
+          "large_packet_share": 0.09632385645440109
+        },
+        {
+          "app_service": "fastly",
+          "large_packet_share": 0.09634782748414182
+        },
+        {
+          "app_service": "multifactor",
+          "large_packet_share": 0.1019031776095445
+        },
+        {
+          "app_service": "vigo",
+          "large_packet_share": 0.10253399568468062
+        }
+      ]
+    },
+    "near_mtu_packet_share": {
+      "highest": [
+        {
+          "app_service": "lamoda",
+          "near_mtu_packet_share": 0.6496494523417511
+        },
+        {
+          "app_service": "createjs",
+          "near_mtu_packet_share": 0.638430973128623
+        },
+        {
+          "app_service": "tweet-feed",
+          "near_mtu_packet_share": 0.5918752324778149
+        },
+        {
+          "app_service": "MEGA",
+          "near_mtu_packet_share": 0.586019983010396
+        },
+        {
+          "app_service": "appdynamics",
+          "near_mtu_packet_share": 0.5683117083719493
+        }
+      ],
+      "lowest": [
+        {
+          "app_service": "emias",
+          "near_mtu_packet_share": 0.0
+        },
+        {
+          "app_service": "moex-online",
+          "near_mtu_packet_share": 2.013399171486241e-05
+        },
+        {
+          "app_service": "Instagram",
+          "near_mtu_packet_share": 0.00020361622414073952
+        },
+        {
+          "app_service": "Facebook",
+          "near_mtu_packet_share": 0.0011084827040551992
+        },
+        {
+          "app_service": "WhatsApp",
+          "near_mtu_packet_share": 0.0018871115426315902
+        }
+      ]
+    }
+  },
+  "clusters": [
+    {
+      "cluster": 0,
+      "applications": 33,
+      "flows": 1170794,
+      "dominant_pattern": "выше среднего: доля байтов клиента; выше среднего: доля пакетов клиента; ниже среднего: доля потоков длины 30",
+      "representative_applications": "profi-ru, miro, avito, zvuk, windows-defender-atp-endpoint",
+      "mean_flow_length": 20.093662209857367,
+      "full_length_share": 0.2541620150114172,
+      "client_packet_share": 0.527772246180517,
+      "client_byte_share": 0.5530569101235268,
+      "mean_abs_packet_size": 692.9878739046292,
+      "mean_direction_changes": 7.097516406231105,
+      "small_packet_share": 0.19747668858940332,
+      "large_packet_share": 0.355772847043197,
+      "near_mtu_packet_share": 0.28878202910714024
+    },
+    {
+      "cluster": 1,
+      "applications": 35,
+      "flows": 1322223,
+      "dominant_pattern": "ниже среднего: средний размер пакета; ниже среднего: доля пакетов ≥1200 Б; выше среднего: смены направления",
+      "representative_applications": "trading-view, tns-counter, Spotify, yonote, kontur",
+      "mean_flow_length": 21.676043243120517,
+      "full_length_share": 0.3459525426509536,
+      "client_packet_share": 0.47317534091684765,
+      "client_byte_share": 0.4102507281487945,
+      "mean_abs_packet_size": 458.76344456282845,
+      "mean_direction_changes": 8.888665520110157,
+      "small_packet_share": 0.2806988215008234,
+      "large_packet_share": 0.18397224368164303,
+      "near_mtu_packet_share": 0.1437123873270347
+    },
+    {
+      "cluster": 2,
+      "applications": 83,
+      "flows": 3292156,
+      "dominant_pattern": "выше среднего: средняя длина потока; выше среднего: средний размер пакета; ниже среднего: доля пакетов ≤64 Б",
+      "representative_applications": "samsung-online, litres, amd-online, cdek, huntflow",
+      "mean_flow_length": 21.412257921940366,
+      "full_length_share": 0.33753309264972675,
+      "client_packet_share": 0.3926586535783882,
+      "client_byte_share": 0.2930853499328352,
+      "mean_abs_packet_size": 745.4144267817994,
+      "mean_direction_changes": 7.231739263236839,
+      "small_packet_share": 0.16492853123852402,
+      "large_packet_share": 0.38836506563409356,
+      "near_mtu_packet_share": 0.29507559155842356
+    },
+    {
+      "cluster": 3,
+      "applications": 39,
+      "flows": 815248,
+      "dominant_pattern": "выше среднего: доля пакетов ≥1200 Б; выше среднего: средний размер пакета; ниже среднего: доля пакетов клиента",
+      "representative_applications": "gismeteo, net-beans, Steam, jsdelivr, 101-radio",
+      "mean_flow_length": 21.511828224770536,
+      "full_length_share": 0.4022067820421938,
+      "client_packet_share": 0.2871476622738712,
+      "client_byte_share": 0.16951714080364985,
+      "mean_abs_packet_size": 916.2133917156801,
+      "mean_direction_changes": 5.530612296549599,
+      "small_packet_share": 0.103947314200866,
+      "large_packet_share": 0.5337794327661288,
+      "near_mtu_packet_share": 0.424648144103829
+    },
+    {
+      "cluster": 4,
+      "applications": 62,
+      "flows": 1648125,
+      "dominant_pattern": "ниже среднего: средняя длина потока; ниже среднего: доля потоков длины 30; ниже среднего: доля пакетов ≥1200 Б",
+      "representative_applications": "crazyegg, nvidia, wikiportal, yahoo, adobe",
+      "mean_flow_length": 16.614976047490998,
+      "full_length_share": 0.1325079939036078,
+      "client_packet_share": 0.412712558913155,
+      "client_byte_share": 0.31725905970017804,
+      "mean_abs_packet_size": 630.2968152160998,
+      "mean_direction_changes": 6.256221744816847,
+      "small_packet_share": 0.2215635151404548,
+      "large_packet_share": 0.30384396462329055,
+      "near_mtu_packet_share": 0.22177879421127256
+    }
+  ],
+  "method_note": "Кластеры построены по стандартизованным средним профилям классов. Они являются описательным инструментом и не используются как истинные метки."
+}

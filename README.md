@@ -15,6 +15,7 @@ Traffic`. Модель получает только 30 знаковых раз�
 - точный 128-битный lookup для совпадений train/test;
 - корректные macro-F1, weighted-F1 и accuracy;
 - потоковый анализ полного датасета и PNG-графики для отчёта;
+- профили и позиционные паттерны всех 252 приложений с кластерным анализом;
 - готовый [Colab notebook](traffic_detection_colab.ipynb).
 
 ## Быстрый запуск в Google Colab
@@ -232,6 +233,37 @@ python scripts/generate_report_assets.py \
 - динамику метрик CNN по эпохам;
 - сравнение CatBoost, CNN и ансамбля на общей validation-выборке.
 
+## Анализ паттернов приложений
+
+Подробное пошаговое исследование находится в
+[`docs/data_analysis.md`](docs/data_analysis.md). В нём приведены определения
+признаков, графики по меткам, сравнение Telegram, WhatsApp, YouTube, Teams,
+zoom, GMail и других приложений, корреляции, позиционные профили и результаты
+кластеризации.
+
+Воспроизвести анализ непосредственно по исходному CSV:
+
+```bash
+python scripts/analyze_application_patterns.py \
+  --train-csv /content/competition_data/train.csv \
+  --output-dir analysis_results \
+  --batch-size 250000 --clusters 5
+```
+
+Если подготовленные memmap уже созданы, повторно разбирать CSV не требуется:
+
+```bash
+python scripts/analyze_application_patterns.py \
+  --data-dir /content/prepared \
+  --output-dir analysis_results \
+  --batch-size 250000 --clusters 5
+```
+
+Скрипт не обучает модели и не требует GPU. Он обрабатывает данные пакетами,
+создаёт `application_profiles.csv`, таблицы ближайших профилей, JSON с
+выводами и десять PNG-графиков. Небольшие результаты из `analysis_results`
+предназначены для публикации вместе с кодом.
+
 ## Публикация в Git
 
 CSV, подготовленные массивы и веса исключены через `.gitignore`, поскольку они
@@ -258,4 +290,3 @@ git push -u origin main
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
-# Detection-of-TLS-traffic

@@ -19,6 +19,9 @@ competition_data/
 data/
 smoke/
 
+# Small, reproducible EDA tables are intentionally versioned.
+!analysis_results/*.csv
+
 # Trained models and generated outputs
 *.pt
 *.pth
