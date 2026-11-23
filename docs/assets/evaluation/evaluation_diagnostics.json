@@ -1,0 +1,52 @@
+{
+  "evaluation_type": "stratified_sample_of_untouched_holdout",
+  "warning": "ROC/PR use model probabilities on the original seed=42 validation split. When max_rows is non-zero, the holdout is stratified down to that size.",
+  "rows": 100000,
+  "full_holdout_rows": 412428,
+  "classes": 252,
+  "seed": 42,
+  "val_size": 0.05,
+  "device": "cpu",
+  "cnn_weight": 0.8,
+  "metrics": {
+    "cnn": {
+      "accuracy": 0.96124,
+      "macro_f1": 0.9401759100947353,
+      "weighted_f1": 0.9591840401118307,
+      "top_3_accuracy": 0.99598,
+      "top_5_accuracy": 0.99736,
+      "log_loss": 0.11822008233156871,
+      "roc_auc_ovr_macro": 0.9996596708181187,
+      "roc_auc_ovr_weighted": 0.9996955141936932,
+      "average_precision_macro": 0.9633639731889959,
+      "average_precision_weighted": 0.9745352502708478,
+      "expected_calibration_error": 0.022548861720338487
+    },
+    "catboost": {
+      "accuracy": 0.87742,
+      "macro_f1": 0.7977868182962103,
+      "weighted_f1": 0.8835718283235438,
+      "top_3_accuracy": 0.96853,
+      "top_5_accuracy": 0.97948,
+      "log_loss": 0.4114861948294926,
+      "roc_auc_ovr_macro": 0.9989651689843647,
+      "roc_auc_ovr_weighted": 0.9987281186426978,
+      "average_precision_macro": 0.9052135725856293,
+      "average_precision_weighted": 0.9380936437998086,
+      "expected_calibration_error": 0.04145331230882555
+    },
+    "ensemble": {
+      "accuracy": 0.96098,
+      "macro_f1": 0.9421068831541048,
+      "weighted_f1": 0.9594683114755375,
+      "top_3_accuracy": 0.99556,
+      "top_5_accuracy": 0.9972,
+      "log_loss": 0.1451648627024427,
+      "roc_auc_ovr_macro": 0.9996786827127656,
+      "roc_auc_ovr_weighted": 0.9996892257101808,
+      "average_precision_macro": 0.963352222388276,
+      "average_precision_weighted": 0.973657981941744,
+      "expected_calibration_error": 0.04908844009574505
+    }
+  }
+}

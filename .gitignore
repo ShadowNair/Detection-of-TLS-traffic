@@ -21,6 +21,7 @@ smoke/
 
 # Small, reproducible EDA tables are intentionally versioned.
 !analysis_results/*.csv
+!docs/assets/evaluation/*.csv
 
 # Trained models and generated outputs
 *.pt

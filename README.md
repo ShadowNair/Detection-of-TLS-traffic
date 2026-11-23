@@ -246,6 +246,50 @@ python scripts/generate_report_assets.py \
 
 ![Сравнение моделей](docs/assets/report/model_comparison.png)
 
+### ROC, Precision–Recall и анализ ошибок
+
+Для multiclass-задачи с 252 классами используется схема One-vs-Rest. Помимо
+ROC-AUC строятся Precision–Recall, per-class F1, confusion matrix, top-k
+accuracy и калибровка. Это важно: при большом числе классов ROC-AUC может быть
+почти единицей из-за огромного числа отрицательных примеров, даже если для
+отдельных редких классов качество заметно ниже.
+
+Диагностика на стратифицированных 100 000 объектах исходного независимого
+holdout дала:
+
+| Модель | ROC-AUC OvR macro | Average Precision macro | Top-1 | Top-3 | ECE |
+|---|---:|---:|---:|---:|---:|
+| CNN | 0,99966 | **0,96336** | **0,96124** | **0,99598** | **0,02255** |
+| CatBoost | 0,99897 | 0,90521 | 0,87742 | 0,96853 | 0,04145 |
+| Ансамбль | **0,99968** | 0,96335 | 0,96098 | 0,99556 | 0,04909 |
+
+Готовые результаты находятся в [`docs/assets/evaluation`](docs/assets/evaluation):
+
+- [ROC-кривые выбранных классов](docs/assets/evaluation/roc_curves_selected_classes.png);
+- [Precision–Recall выбранных классов](docs/assets/evaluation/precision_recall_selected_classes.png);
+- [сравнение ROC-AUC и Average Precision](docs/assets/evaluation/auc_model_comparison.png);
+- [confusion matrix](docs/assets/evaluation/confusion_matrix_top30.png);
+- [классы с минимальным F1](docs/assets/evaluation/lowest_class_f1.png);
+- [частые пары ошибок](docs/assets/evaluation/top_confusion_pairs.png);
+- [калибровка вероятностей](docs/assets/evaluation/calibration_curves.png);
+- [top-k accuracy](docs/assets/evaluation/top_k_accuracy.png).
+
+Воспроизведение по уже подготовленным данным и сохранённым весам:
+
+```bash
+python scripts/generate_evaluation_diagnostics.py \
+  --data-dir /content/prepared \
+  --cnn-checkpoint /content/artifacts/cnn/best.pt \
+  --catboost-model /content/artifacts/catboost/model.cbm \
+  --ensemble-config /content/artifacts/ensemble.json \
+  --output-dir /content/artifacts/evaluation_diagnostics \
+  --max-rows 100000
+```
+
+![ROC-кривые](docs/assets/evaluation/roc_curves_selected_classes.png)
+
+![Precision–Recall](docs/assets/evaluation/precision_recall_selected_classes.png)
+
 ## Анализ паттернов приложений
 
 Подробное пошаговое исследование находится в
